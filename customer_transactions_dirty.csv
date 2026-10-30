@@ -1,0 +1,101 @@
+transaction_id,customer_name,email,phone_number,ssn,credit_card_number,ip_address,transaction_amount,transaction_date,account_type,branch_location,mother_maiden_name,notes
+TXN-000001,Joseph Jackson,j.jackson@gmail.com,(214) 548-5552,881-53-2674,4916-5594-0781-6184,,1398.17,2024-11-12,Investment,Austin,Murphy,Alternate contact: 713-746-5010
+TXN-000002,David Robinson,david29@corpfin.net,(212) 434-1525,,4916-3953-7672-4238,192.219.204.93,3203.6,2024-04-22,Savings,San Jose,Sullivan,Payroll credit
+TXN-000003,Charles Garcia,charles.garcia@outlook.com,(214) 590-8668,,,,3962.48,2024-01-06,Checking,Miami,,Loan repayment
+TXN-000004,Patricia Martinez,,(713) 664-1053,,,192.91.54.223,#REF!,2024-11-16,Investment,Atlanta,,Payroll credit
+TXN-000005,Barbara Harris,,(206) 200-6310,,4012-4303-9117-1822,192.84.135.136,816.13,2024-11-06,Credit,Phoenix,,Insurance premium
+TXN-000006,Daniel Martinez,daniel_martinez@bankmail.com,(312) 453-4681,121-85-4770,4532-1031-0518-3473,192.242.124.201,2000.97,2024-08-30,Credit,Phoenix,Byrne,Inter-account transfer
+TXN-000007,Joseph Ramirez,joseph_ramirez@gmail.com,(305) 311-5073,649-67-3296,3782-7317-8108-0132,172.109.205.232,3648.09,2024-01-31,Savings,San Antonio,Burke,Service charge
+TXN-000008,Elizabeth Wilson,elizabeth_wilson@corpfin.net,(713) 394-5861,159-84-9883,4012-0097-8820-8121,192.120.206.31,3485.99,2024-10-18,Savings,Austin,,Inter-account transfer
+TXN-000009,Lisa Jackson,l.jackson@bankmail.com,(305) 444-5351,787-92-5915,4916-0799-1183-8425,,2830.48,2024-05-05,Investment,Los Angeles,Powers,Account maintenance fee
+TXN-000010,Betty Lee,betty.lee@corpfin.net,(713) 470-2891,,,172.107.175.53,2649.41,2024-12-17,Investment,San Jose,Sullivan,Call me at 214-483-1722
+TXN-000011,Elizabeth Lopez,e.lopez@gmail.com,(602) 882-2684,673-62-3532,,10.90.211.7,4495.92,2024-04-01,Investment,Denver,,Utility bill payment
+TXN-000012,David Garcia,,(312) 591-1634,,4111-5433-0365-4145,172.169.14.30,3939.0,2024-05-13,Savings,Austin,,Direct deposit
+TXN-000013,Karen Wilson,karen.wilson@bankmail.com,(214) 790-4114,825-65-1027,5425-5615-9514-8465,172.65.98.108,1734.98,2024-12-06,Credit,Miami,,Card ending 4532-4436-9957-7738
+TXN-000014,Thomas Perez,,(305) 295-4848,,5425-2003-7917-6936,10.75.2.229,3168.37,2024-02-24,Credit,Phoenix,Daly,Mobile deposit
+TXN-000015,Linda Robinson,,(404) 336-8612,,,172.218.228.230,4243.2,2024-03-22,Credit,Dallas,Gallagher,Recurring subscription
+TXN-000016,Matthew Harris,matthew_harris@yahoo.com,(312) 930-5681,443-50-9849,5274-3623-1665-8760,172.199.10.220,2611.29,2024-10-21,Credit,Dallas,Quinn,Cash deposit
+TXN-000017,Margaret Lewis,m.lewis@outlook.com,(404) 424-5471,,4012-6272-9806-9901,10.236.93.13,4767.62,2024-05-13,Credit,Philadelphia,McCarthy,Cash deposit
+TXN-000018,David Harris,,(214) 458-2341,,,172.114.35.200,4756.51,2024-11-29,Checking,Denver,Gallagher,Send receipt to sandra.martinez@gmail.com
+TXN-000019,Lisa Robinson,l.robinson@outlook.com,(312) 806-4978,891-48-2983,,10.177.219.170,4791.28,2024-07-08,Checking,San Jose,,Call me at 214-701-2729
+TXN-000020,David Lewis,david_lewis@outlook.com,(305) 229-9098,,5425-5454-9480-8313,,2259.5,2024-09-07,Savings,Seattle,Connolly,Monthly payment
+TXN-000021,Robert Martinez,robert40@yahoo.com,(404) 766-9698,863-80-6419,4111-4443-1351-8233,,1115.77,2024-05-21,Investment,Chicago,,Refund processed
+TXN-000022,Jennifer Martinez,jennifer17@corpfin.net,(212) 255-5786,,4111-1094-7775-2047,10.205.251.19,80.6,2024-10-22,Checking,Houston,Nolan,ATM withdrawal
+TXN-000023,Linda Brown,l.brown@outlook.com,(206) 589-8381,,5105-4990-9133-4123,10.80.1.105,2794.78,2024-08-18,Credit,Los Angeles,Flynn,Service charge
+TXN-000024,Robert Perez,r.perez@bankmail.com,(214) 317-9922,252-44-3330,5274-4994-7174-6488,10.20.221.189,1174.78,2024-06-14,Investment,New York,Nolan,Monthly payment
+TXN-000025,Matthew Perez,m.perez@corpfin.net,(404) 731-8245,,5105-7175-6551-2567,172.18.232.23,4108.89,2024-06-10,Investment,Philadelphia,Burke,Monthly payment
+TXN-000026,Lisa Ramirez,lisa.ramirez@outlook.com,(602) 730-6927,,4111-0348-2477-1093,,null,2024-06-08,Checking,San Jose,Gallagher,Direct deposit
+TXN-000027,Joseph Brown,joseph64@yahoo.com,(206) 922-5479,,4111-3782-6398-2146,192.136.1.73,3242.07,2024-06-01,Credit,Atlanta,Powers,Loan repayment
+TXN-000028,Sarah Harris,,(404) 529-4090,,5105-3605-7662-7028,,2721.72,2024-06-18,Checking,Atlanta,,Card ending 5274-1745-9615-8657
+TXN-000029,Linda White,,(312) 978-2646,,,,460.99,2024-01-24,Investment,Denver,Quinn,Payroll credit
+TXN-000030,Linda Taylor,,(713) 374-3868,491-89-4945,5274-3747-4074-8217,,2066.14,2024-10-27,Investment,Miami,,Service charge
+TXN-000031,Margaret Martinez,margaret.martinez@outlook.com,(602) 590-6881,,,192.202.140.3,59960.85,2024-10-16,Checking,Boston,,Investment dividend
+TXN-000032,Matthew Sanchez,,(305) 424-4115,,,,1158.29,2024-12-03,Savings,Miami,Sullivan,Service charge
+TXN-000033,Mary Jackson,mary12@yahoo.com,(305) 965-7807,235-79-6994,3782-2474-5171-2368,172.7.135.138,1830.66,2024-03-04,Credit,Philadelphia,,Foreign exchange
+TXN-000034,Richard Clark,r.clark@bankmail.com,(404) 225-6374,,4916-7461-2004-7113,,3196.36,2024-03-10,Credit,Dallas,Powers,Payroll credit
+TXN-000035,Mark Wilson,mark_wilson@outlook.com,(415) 233-7070,555-40-6942,4012-8506-4317-1390,172.124.64.202,3278.06,2024-10-16,Savings,Chicago,,Foreign exchange
+TXN-000036,Michael Clark,,(305) 992-3417,,3782-2284-2102-0539,10.135.26.33,4349.78,2024-08-03,Checking,Seattle,Fitzgerald,Online purchase
+TXN-000037,Christopher Brown,christopher.brown@yahoo.com,(206) 508-8504,,4111-6617-7115-9212,192.166.195.153,2265.51,2024-09-28,Investment,Dallas,,Direct deposit
+TXN-000038,Margaret Lee,m.lee@corpfin.net,(214) 662-4743,,,192.48.160.110,3258.07,2024-06-09,Investment,Philadelphia,,Interest payment
+TXN-000039,Robert Williams,robert.williams@gmail.com,(305) 333-1982,,4012-1656-0494-5198,192.246.114.217,4160.54,2024-02-25,Investment,Atlanta,,Send receipt to margaret.jones@gmail.com
+TXN-000040,Lisa Gonzalez,l.gonzalez@gmail.com,(214) 629-8432,478-49-6314,,10.26.79.41,357.23,2024-11-12,Checking,Miami,Fitzgerald,Interest payment
+TXN-000041,Karen Anderson,karen.anderson@yahoo.com,(305) 640-2816,794-85-8972,3782-0369-0034-3244,10.254.220.45,2076.78,2024-03-07,Credit,San Jose,,Refund processed
+TXN-000042,Robert Gonzalez,robert.gonzalez@gmail.com,(404) 279-6129,,5105-4160-5297-5161,192.205.40.102,4310.2,2024-06-07,Investment,Phoenix,Kennedy,Send receipt to lisa.robinson@gmail.com
+TXN-000043,Charles Lee,charles81@bankmail.com,(713) 650-2118,,,,4932.79,2024-10-29,Checking,Philadelphia,,Service charge
+TXN-000044,Mary Johnson,mary.johnson@bankmail.com,(303) 808-9307,694-80-1672,5425-5978-2071-5182,192.224.224.135,1850.0,2024-09-24,Savings,Philadelphia,Flynn,Loan repayment
+TXN-000045,Lisa Martin,lisa9@bankmail.com,(312) 771-7333,841-94-3463,5274-5462-9148-6528,192.216.185.5,271.3,2024-07-04,Investment,Houston,,Interest payment
+TXN-000046,Michael Davis,michael10@yahoo.com,(312) 719-9843,,,172.67.192.40,4999.88,2024-03-24,Savings,Atlanta,,Mortgage payment
+TXN-000047,Nancy Anderson,n.anderson@bankmail.com,(404) 825-5668,,,10.158.240.232,228.03,2024-04-09,Investment,Miami,,Service charge
+TXN-000048,Matthew Martinez,matthew_martinez@corpfin.net,(713) 404-3267,,4111-5818-1412-4782,,3892.84,2024-02-16,Savings,Atlanta,Quinn,Inter-account transfer
+TXN-000049,Mary Gonzalez,mary.gonzalez@yahoo.com,(305) 429-1461,201-93-6493,,172.241.71.195,2515.02,2024-12-27,Credit,Dallas,,Monthly payment
+TXN-000050,David Miller,david_miller@corpfin.net,(312) 994-5720,224-16-4906,4111-1179-8089-3246,172.123.213.48,4176.47,2024-12-06,Checking,San Jose,,Card ending 4532-6706-5405-1531
+TXN-000051,Sarah Hernandez,sarah_hernandez@yahoo.com,(404) 846-3986,,4111-0430-3054-8687,192.97.146.92,4069.41,2024-01-25,Investment,Los Angeles,Quinn,Cash deposit
+TXN-000052,Nancy Anderson,n.anderson@outlook.com,(404) 908-9151,631-44-2353,,192.92.150.83,4474.24,2024-02-22,Checking,Philadelphia,,Account maintenance fee
+TXN-000053,Daniel Wilson,daniel_wilson@outlook.com,(212) 944-6776,,4532-1658-2029-7021,192.187.185.99,841.56,2024-10-17,Checking,Austin,Fitzgerald,Refund processed
+TXN-000054,Joseph Harris,joseph68@yahoo.com,(214) 521-5566,216-13-4048,5105-8144-7394-7312,,393.66,2024-08-19,Savings,Boston,,Loan repayment
+TXN-000055,Lisa Lopez,,(206) 755-5757,,,,3550.61,2024-12-24,Savings,Denver,Gallagher,Alternate contact: 214-934-8842
+TXN-000056,Anthony Jackson,anthony.jackson@bankmail.com,(404) 677-9476,898-80-3981,,192.28.63.133,53687.53,2024-03-19,Investment,Houston,Gallagher,Online purchase
+TXN-000057,Mark Martinez,mark26@bankmail.com,(713) 840-5961,,5274-9922-9959-0010,,4231.21,2024-10-22,Investment,Miami,Nolan,Monthly payment
+TXN-000058,Jessica Lewis,jessica83@bankmail.com,(404) 450-7653,174-98-1981,5105-7735-9255-5625,10.163.123.120,3139.55,2024-03-03,Investment,Dallas,Kelly,Email backup: linda@email.com
+TXN-000059,Christopher Lopez,christopher_lopez@bankmail.com,(415) 749-1133,,3782-5650-6098-3584,192.230.143.212,252.8,2024-11-15,Checking,Houston,,Loan repayment
+TXN-000060,Sarah Lopez,sarah_lopez@yahoo.com,(206) 241-1742,830-52-8761,5274-9825-9526-9495,192.250.153.122,3777.28,2024-01-09,Investment,Philadelphia,,Foreign exchange
+TXN-000061,Elizabeth Sanchez,elizabeth_sanchez@gmail.com,(415) 871-4728,,5274-8962-3091-3075,172.104.210.129,4494.85,2024-11-09,Credit,Atlanta,,Payroll credit
+TXN-000062,Thomas Miller,thomas_miller@outlook.com,(305) 377-8531,,4012-4973-3484-3443,172.162.245.90,2808.82,2024-10-13,Investment,Los Angeles,Powers,Cash deposit
+TXN-000063,Anthony Lopez,anthony.lopez@yahoo.com,(415) 931-2294,552-93-5201,,192.138.139.36,4773.5,2024-02-25,Savings,Phoenix,Daly,Utility bill payment
+TXN-000064,Mary Brown,m.brown@outlook.com,(212) 763-3587,,,,2072.37,2024-09-01,Savings,Denver,,Wire transfer
+TXN-000065,Sandra Harris,,(303) 437-9767,,,10.213.90.240,456.41,2024-01-19,Credit,Denver,Flynn,Monthly payment
+TXN-000066,Elizabeth Jackson,elizabeth_jackson@bankmail.com,(206) 736-9092,,4111-4315-2742-0549,10.89.207.212,3017.89,2024-08-06,Investment,Chicago,Kelly,Call me at 713-688-6301
+TXN-000067,Joseph Martinez,joseph91@corpfin.net,(312) 854-5833,326-38-3188,4111-9568-7833-9187,172.39.57.16,806.99,2024-10-07,Savings,Austin,,Card ending 5425-9718-7072-8679
+TXN-000068,Nancy Smith,n.smith@gmail.com,(303) 274-1742,,,10.35.241.9,1985.78,2024-05-26,Credit,Houston,,Inter-account transfer
+TXN-000069,Barbara Lewis,barbara.lewis@outlook.com,(206) 336-6697,650-60-9664,5425-0047-8686-3375,10.57.16.208,1918.57,2024-12-04,Credit,Austin,,Monthly payment
+TXN-000070,Linda Miller,,(303) 234-8314,,,192.22.205.113,345.78,2024-04-29,Savings,Denver,,Alternate contact: 206-805-3869
+TXN-000071,Sarah Thomas,sarah_thomas@bankmail.com,(206) 526-7821,,5274-8733-4270-8668,172.124.130.53,243.95,2024-06-18,Checking,Boston,Quinn,Send receipt to sandra.davis@gmail.com
+TXN-000072,Daniel Miller,daniel71@yahoo.com,(415) 589-8639,,3782-5877-1753-5560,10.74.8.67,#REF!,2024-10-10,Credit,Los Angeles,McCarthy,Foreign exchange
+TXN-000073,Anthony Davis,anthony_davis@bankmail.com,(404) 671-3756,,5274-8728-0801-0062,,74965.07,2024-04-28,Checking,Seattle,Brennan,Refund processed
+TXN-000074,Mary Martin,mary_martin@corpfin.net,(212) 206-9719,,3782-8408-6211-8233,172.181.136.204,3192.27,2024-07-22,Checking,Philadelphia,,Utility bill payment
+TXN-000075,Daniel Davis,daniel.davis@gmail.com,(312) 615-7213,587-17-1154,,172.169.48.230,1506.87,2024-09-27,Checking,Phoenix,Nolan,Wire transfer
+TXN-000076,Sandra Williams,,(415) 756-1539,422-12-4394,5105-1429-3968-5621,172.27.50.112,3425.3,2024-04-28,Checking,Philadelphia,,Account maintenance fee
+TXN-000077,Richard Harris,richard_harris@bankmail.com,(602) 564-7150,,,10.151.126.183,1638.62,2024-02-07,Checking,Los Angeles,Walsh,Loan repayment
+TXN-000078,Barbara Brown,barbara_brown@gmail.com,(305) 979-5419,189-33-8061,5105-1015-8199-5604,10.124.86.176,N/A,2024-07-13,Savings,Houston,Doyle,ATM withdrawal
+TXN-000079,Jennifer Wilson,jennifer.wilson@bankmail.com,(305) 457-5040,,5425-7124-0659-6575,192.69.153.83,1387.05,2024-11-04,Savings,Dallas,Burke,Investment dividend
+TXN-000080,Nancy Thompson,nancy32@corpfin.net,(214) 487-7437,677-35-9939,4532-7374-1672-4342,,3168.18,2024-07-12,Checking,Dallas,,Cash deposit
+TXN-000081,Sarah Taylor,sarah.taylor@outlook.com,(305) 918-9796,,,10.181.85.166,4618.24,2024-11-09,Checking,Austin,,Cash deposit
+TXN-000082,Matthew Hernandez,,(214) 308-1172,327-75-9499,5425-7567-9825-0714,10.59.72.90,4828.93,2024-06-08,Investment,Dallas,,Refund processed
+TXN-000083,Jessica Brown,jessica.brown@outlook.com,(415) 245-2885,451-92-2791,,192.124.89.142,2196.45,2024-03-22,Investment,San Jose,Fitzgerald,Cash deposit
+TXN-000084,Charles Garcia,charles.garcia@outlook.com,(303) 402-8365,,5425-3419-1825-5371,172.160.198.157,940.07,2024-07-19,Checking,Philadelphia,Fitzgerald,Investment dividend
+TXN-000085,Sandra Martin,sandra.martin@yahoo.com,(602) 512-2916,810-28-9369,5274-9662-7828-2742,172.27.183.244,2954.94,2024-01-05,Credit,Houston,Burke,Online purchase
+TXN-000086,Charles Thomas,charles_thomas@outlook.com,(404) 371-2354,,,10.140.115.138,2051.58,2024-05-27,Savings,Denver,Connolly,Direct deposit
+TXN-000087,Christopher Brown,,(206) 575-9880,,4111-8361-3407-4517,,1346.77,2024-03-01,Savings,Phoenix,,Refund processed
+TXN-000088,Margaret Thompson,m.thompson@outlook.com,(602) 411-1972,,5274-5449-4812-6042,,80513.08,2024-03-08,Savings,Houston,,Cash deposit
+TXN-000089,Jessica Jones,jessica_jones@bankmail.com,(214) 662-2237,,,192.142.188.117,2891.35,2024-09-06,Investment,Austin,Murphy,Service charge
+TXN-000090,Charles Perez,charles_perez@gmail.com,(602) 639-4470,,3782-5892-9750-0170,10.225.233.1,3489.47,2024-08-07,Savings,Seattle,,Investment dividend
+TXN-000091,Jennifer Ramirez,jennifer12@bankmail.com,(415) 284-7092,,,192.156.119.110,4664.3,2024-12-01,Checking,Seattle,Brennan,Payroll credit
+TXN-000092,Christopher Davis,christopher.davis@outlook.com,(305) 323-7919,,5425-6111-5542-6221,10.84.225.90,null,2024-04-19,Savings,Boston,Fitzgerald,ATM withdrawal
+TXN-000093,Mark Brown,mark_brown@gmail.com,(305) 639-6152,,4916-3899-9404-3898,172.151.27.201,708.67,2024-05-02,Credit,San Antonio,Connolly,ATM withdrawal
+TXN-000094,Thomas Lewis,t.lewis@bankmail.com,(214) 782-7895,799-32-8717,,,4888.71,2024-01-09,Checking,New York,Sullivan,Cash deposit
+TXN-000095,Thomas Martinez,,(206) 985-7806,,5274-4141-8328-5691,172.122.29.63,81428.53,2024-02-14,Credit,Chicago,Reilly,Call me at 713-322-1207
+TXN-000096,David Thompson,david_thompson@gmail.com,(206) 568-1908,,4012-2419-1380-0030,172.76.91.239,4875.5,2024-01-19,Credit,Phoenix,Byrne,Loan repayment
+TXN-000097,David Clark,david.clark@bankmail.com,(713) 428-9450,,,172.144.159.84,398.66,2024-02-14,Credit,New York,Flynn,Investment dividend
+TXN-000098,Nancy Martin,nancy_martin@bankmail.com,(602) 950-9954,,4532-6038-5050-6413,10.214.251.247,1220.49,2024-01-31,Savings,Seattle,Sullivan,Online purchase
+TXN-000099,Susan Thompson,susan.thompson@outlook.com,(303) 297-9280,503-19-2020,5274-3445-6557-4313,192.55.79.28,4478.93,2024-03-25,Credit,Dallas,Kelly,Insurance premium
+TXN-000100,Joseph Martinez,j.martinez@gmail.com,(415) 921-1660,435-28-2494,,,2322.1,2024-07-21,Checking,Miami,Kennedy,Email backup: patricia@email.com
