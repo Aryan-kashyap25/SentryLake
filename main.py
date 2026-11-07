@@ -1,5 +1,5 @@
 """
-main.py — DataSentinel AI
+main.py — SentryLake
 Autonomous Data Governance, Drift Detection & Real-Time Quarantine Control Plane
 Production-grade backend for Lakehouse Governance, Policy-as-Code (dbt & PySpark),
 Differential Privacy Synthetic Twin generation, and Live Stream Quarantine Interception.
@@ -27,7 +27,7 @@ from fastapi.staticfiles import StaticFiles
 # ═══════════════════════════════════════════════════════════════════════════════
 
 app = FastAPI(
-    title="DataSentinel AI — Autonomous Governance Control Plane",
+    title="SentryLake — Autonomous Governance Control Plane",
     description="Real-Time Data Lakehouse Governance, Drift Detection & Stream Quarantine",
     version="2.0.0",
 )
@@ -436,7 +436,7 @@ def execute_batch_audit(df: pd.DataFrame, filename: str) -> dict:
     )
 
     audit_memo = (
-        f"DATASENTINEL AI COMPLIANCE MEMO\n"
+        f"SENTRYLAKE COMPLIANCE MEMO\n"
         f"====================================================\n"
         f"AUDITED TIMESTAMP: {datetime.now(timezone.utc).isoformat()}\n"
         f"SOURCE DATASET:    {filename}\n"
@@ -473,7 +473,7 @@ def build_remediation_code(column_analysis: list[dict], table_name: str = "custo
     """Generate production-ready PySpark and dbt SQL code tailored to detected issues."""
     pyspark_lines = [
         "# ==============================================================================",
-        "# DataSentinel AI — Autonomous Remediation Pipeline",
+        "# SentryLake — Autonomous Remediation Pipeline",
         "# Engine: Apache Spark / Databricks Delta Lake",
         "# Description: Auto-generated Policy-as-Code for PII Anonymization & Drift Imputation",
         "# ==============================================================================",
@@ -481,7 +481,7 @@ def build_remediation_code(column_analysis: list[dict], table_name: str = "custo
         "from pyspark.sql import functions as F",
         "from pyspark.sql.types import DoubleType, StringType",
         "",
-        "spark = SparkSession.builder.appName('DataSentinel_Remediation').getOrCreate()",
+        "spark = SparkSession.builder.appName('SentryLake_Remediation').getOrCreate()",
         "",
         f"# Ingest unshielded raw table from bronze lakehouse tier",
         f"df_bronze = spark.table('bronze_lake.{table_name}')",
@@ -599,7 +599,7 @@ def build_remediation_code(column_analysis: list[dict], table_name: str = "custo
 
     dbt_lines = [
         "-- ==============================================================================",
-        "-- DataSentinel AI — Autonomous dbt Transformation Model",
+        "-- SentryLake — Autonomous dbt Transformation Model",
         f"-- Model: silver_{table_name}_governed.sql",
         "-- Target Engines: Snowflake / Databricks Unity Catalog",
         "-- ==============================================================================",
@@ -607,7 +607,7 @@ def build_remediation_code(column_analysis: list[dict], table_name: str = "custo
         "    config(",
         "        materialized='table',",
         "        schema='governed',",
-        "        tags=['data_sentinel', 'pci_dss_compliant', 'gdpr_ready']",
+        "        tags=['sentrylake', 'pci_dss_compliant', 'gdpr_ready']",
         "    )",
         "}}",
         "",

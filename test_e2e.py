@@ -1,4 +1,4 @@
-"""Quick E2E test for DataSentinel AI API."""
+"""Quick E2E test for SentryLake API."""
 import json
 import requests
 
@@ -9,7 +9,7 @@ resp = requests.post(
 data = resp.json()
 s = data["summary"]
 
-print("=== DATASENTINEL AI - E2E TEST ===")
+print("=== SENTRYLAKE - E2E TEST ===")
 print(f"Status Code: {resp.status_code}")
 print(f"Records: {s['total_records']}")
 print(f"PII Incidents: {s['pii_incidents']}")

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DataSentinel AI — Autonomous Governance &amp; Quarantine Control Plane</title>
+    <title>SentryLake — Autonomous Governance &amp; Quarantine Control Plane</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons CDN -->
@@ -133,7 +133,7 @@
                 </div>
                 <div>
                     <div class="flex items-center gap-2">
-                        <span class="text-sm font-bold tracking-tight text-white">DataSentinel<span class="text-cyan-400">.AI</span></span>
+                        <span class="text-sm font-bold tracking-tight text-white">Sentry<span class="text-cyan-400">Lake</span></span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-obsidian-850 border border-obsidian-border text-slate-300 font-semibold">LAKEHOUSE CONTROL PLANE</span>
                     </div>
                     <p class="text-[11px] text-slate-400 font-mono">Autonomous Governance &bull; Policy-as-Code &bull; Stream Quarantine</p>
@@ -175,38 +175,69 @@
         <div id="batchView" class="space-y-6">
 
             <!-- Ingest Drag-and-Drop + Instant Demo Strip -->
-            <div class="ds-card p-6 flex flex-col md:flex-row items-center justify-between gap-6 border-dashed border-obsidian-border hover:border-slate-600 transition" id="batchDropZone">
+            <div class="ds-card p-8 flex flex-col md:flex-row items-center justify-between gap-6 border-dashed border-2 border-obsidian-border hover:border-cyan-500/50 transition cursor-pointer" id="batchDropZone">
                 <input type="file" id="batchFileInput" accept=".csv" class="hidden" />
-                <div class="flex items-center gap-4 cursor-pointer" onclick="document.getElementById('batchFileInput').click()">
-                    <div class="w-12 h-12 rounded-xl bg-obsidian-850 border border-obsidian-border flex items-center justify-center text-cyan-400">
-                        <i data-lucide="file-up" class="w-6 h-6"></i>
+                <div class="flex items-center gap-5" id="dropZonePrompt">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+                        <i data-lucide="upload-cloud" class="w-7 h-7"></i>
                     </div>
                     <div>
-                        <h3 class="text-sm font-semibold text-white">Ingest Lakehouse Batch CSV</h3>
-                        <p class="text-xs text-slate-400 font-mono">Drag &amp; drop or click to upload table snapshot &bull; Evaluates PCI-DSS, GDPR &amp; HIPAA</p>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-base font-bold text-white tracking-tight">Upload Lakehouse CSV Snapshot</h3>
+                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-500/30 font-semibold">WAITING FOR FILE</span>
+                        </div>
+                        <p class="text-xs text-slate-400 font-mono mt-1">Drag &amp; drop your CSV here, or click to browse from disk &bull; Evaluates PCI-DSS, GDPR &amp; HIPAA</p>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3">
-                    <button id="batchDemoBtn" class="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 text-cyan-300 text-xs font-bold font-mono hover:border-cyan-400 transition flex items-center gap-2">
-                        <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+                <div class="flex items-center gap-3 shrink-0" onclick="event.stopPropagation()">
+                    <button id="batchDemoBtn" class="px-4 py-2.5 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 text-cyan-300 text-xs font-bold font-mono hover:border-cyan-400 transition flex items-center gap-2">
+                        <i data-lucide="zap" class="w-4 h-4"></i>
                         ⚡ Ingest 100-Row Banking Demo Snapshot
                     </button>
-                    <button onclick="document.getElementById('batchFileInput').click()" class="px-4 py-2 rounded-lg bg-obsidian-850 border border-obsidian-border text-slate-300 text-xs font-semibold hover:bg-slate-800 transition">
+                    <button id="browseFilesBtn" class="px-4 py-2.5 rounded-lg bg-obsidian-850 border border-obsidian-border text-slate-200 text-xs font-mono font-semibold hover:bg-slate-800 transition flex items-center gap-2">
+                        <i data-lucide="folder-open" class="w-4 h-4"></i>
                         Browse Files
                     </button>
+                </div>
+            </div>
+
+            <!-- Empty State Prompt (Visible before first upload) -->
+            <div id="emptyStatePrompt" class="ds-card p-12 text-center border-dashed border-obsidian-border space-y-4">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-obsidian-850 border border-obsidian-border flex items-center justify-center text-slate-500">
+                    <i data-lucide="shield-search" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-slate-300 font-mono">No Dataset Audited Yet</h4>
+                    <p class="text-xs text-slate-400 font-mono max-w-md mx-auto mt-1">
+                        Upload a banking transaction or customer CSV snapshot above to trigger autonomous PII detection, schema drift flags, and policy-as-code generation.
+                    </p>
                 </div>
             </div>
 
             <!-- Loader State -->
             <div id="batchLoader" class="hidden py-16 text-center">
                 <div class="inline-block animate-spin w-10 h-10 border-2 border-cyan-400 border-t-transparent rounded-full mb-4"></div>
-                <h4 class="text-sm font-semibold text-white">Executing Autonomous Governance Audit...</h4>
+                <h4 class="text-sm font-semibold text-white" id="batchLoaderText">Executing Autonomous Governance Audit...</h4>
                 <p class="text-xs text-slate-400 font-mono mt-1">Running Luhn algorithm checks &bull; Computing Z-score drift &bull; Analyzing schema integrity</p>
             </div>
 
             <!-- Batch Audit Content (Revealed after scan) -->
-            <div id="batchResults" class="space-y-6">
+            <div id="batchResults" class="space-y-6 hidden">
+
+                <!-- Active Audit File Bar & Reset Button -->
+                <div class="ds-card px-5 py-3.5 flex flex-wrap items-center justify-between gap-4 bg-obsidian-850/80 border-cyan-500/20">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-live-dot"></span>
+                        <span class="text-xs font-mono font-bold uppercase text-slate-300">Active Audit Snapshot:</span>
+                        <span class="text-xs font-mono font-bold text-cyan-400 px-2.5 py-1 rounded bg-cyan-950/80 border border-cyan-500/40" id="currentFileName">customer_transactions_dirty.csv</span>
+                        <span class="text-[11px] font-mono text-slate-400" id="currentFileSize">(15.3 KB)</span>
+                    </div>
+                    <button id="resetBatchBtn" class="px-3 py-1.5 rounded-lg bg-obsidian-950 border border-obsidian-border text-slate-300 hover:text-white hover:border-slate-600 text-xs font-mono transition flex items-center gap-2">
+                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                        Upload Another Dataset
+                    </button>
+                </div>
 
                 <!-- 4 Executive Metric Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -437,7 +468,7 @@
                                 <h3 class="text-sm font-bold font-mono text-white uppercase">Kafka Ingestion Stream Guardian</h3>
                                 <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/30 font-bold">REAL-TIME INTERCEPTION</span>
                             </div>
-                            <p class="text-xs text-slate-400 font-mono mt-0.5">Topic: <span class="text-slate-200 font-bold">financial.transactions.v1</span> &bull; Consumer Group: <span class="text-slate-200">datasentinel-stream-filter</span></p>
+                            <p class="text-xs text-slate-400 font-mono mt-0.5">Topic: <span class="text-slate-200 font-bold">financial.transactions.v1</span> &bull; Consumer Group: <span class="text-slate-200">sentrylake-stream-filter</span></p>
                         </div>
                     </div>
 
@@ -525,7 +556,7 @@
 
     <!-- ═══ ENTERPRISE FOOTER ═══ -->
     <footer class="max-w-[1720px] mx-auto px-6 py-8 border-t border-obsidian-border text-xs font-mono text-slate-500 flex flex-wrap items-center justify-between gap-4">
-        <div>&copy; 2026 DataSentinel AI &bull; Autonomous Lakehouse &amp; Stream Governance Control Plane</div>
+        <div>&copy; 2026 SentryLake &bull; Autonomous Lakehouse &amp; Stream Governance Control Plane</div>
         <div class="flex items-center gap-4 text-slate-400">
             <span>PCI-DSS 4.0 Standard</span>
             <span>&bull;</span>
@@ -570,42 +601,113 @@
         let cachedAuditData = null;
         let cachedRemediation = null;
 
+        const batchDropZone = document.getElementById('batchDropZone');
         const batchDemoBtn = document.getElementById('batchDemoBtn');
+        const browseFilesBtn = document.getElementById('browseFilesBtn');
         const batchFileInput = document.getElementById('batchFileInput');
         const batchLoader = document.getElementById('batchLoader');
+        const batchLoaderText = document.getElementById('batchLoaderText');
         const batchResults = document.getElementById('batchResults');
+        const emptyStatePrompt = document.getElementById('emptyStatePrompt');
+        const resetBatchBtn = document.getElementById('resetBatchBtn');
 
-        batchDemoBtn.addEventListener('click', () => runBatchScan('/api/scan-sample'));
-        batchFileInput.addEventListener('change', (e) => {
-            if (e.target.files && e.target.files[0]) {
+        // File selection triggers
+        batchDropZone.addEventListener('click', () => batchFileInput.click());
+        browseFilesBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            batchFileInput.click();
+        });
+
+        // Drag and drop event listeners
+        batchDropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            batchDropZone.classList.add('border-cyan-400', 'bg-cyan-950/20');
+        });
+
+        batchDropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            batchDropZone.classList.remove('border-cyan-400', 'bg-cyan-950/20');
+        });
+
+        batchDropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            batchDropZone.classList.remove('border-cyan-400', 'bg-cyan-950/20');
+
+            if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
+                const file = e.dataTransfer.files[0];
                 const formData = new FormData();
-                formData.append('file', e.target.files[0]);
-                runBatchScan('/api/audit-batch', formData);
+                formData.append('file', file);
+                runBatchScan('/api/audit-batch', formData, file.name, file.size);
             }
         });
 
-        async function runBatchScan(url, formData = null) {
+        batchFileInput.addEventListener('change', (e) => {
+            if (e.target.files && e.target.files[0]) {
+                const file = e.target.files[0];
+                const formData = new FormData();
+                formData.append('file', file);
+                runBatchScan('/api/audit-batch', formData, file.name, file.size);
+            }
+        });
+
+        batchDemoBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            runBatchScan('/api/scan-sample', null, 'customer_transactions_dirty.csv', 15296);
+        });
+
+        resetBatchBtn.addEventListener('click', () => {
+            batchResults.classList.add('hidden');
+            batchLoader.classList.add('hidden');
+            emptyStatePrompt.classList.remove('hidden');
+            batchFileInput.value = '';
+            cachedAuditData = null;
+            lucide.createIcons();
+        });
+
+        function formatBytes(bytes) {
+            if (!bytes || bytes === 0) return '0 B';
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+        }
+
+        async function runBatchScan(url, formData = null, fileName = 'dataset.csv', fileSize = 0) {
+            emptyStatePrompt.classList.add('hidden');
             batchResults.classList.add('hidden');
             batchLoader.classList.remove('hidden');
+            batchLoaderText.textContent = `Auditing ${fileName}... Evaluating PII & Schema Drift`;
 
             try {
                 const opts = formData ? { method: 'POST', body: formData } : { method: 'POST' };
                 const res = await fetch(url, opts);
-                if (!res.ok) throw new Error("Batch audit failed");
+                if (!res.ok) {
+                    const err = await res.json();
+                    throw new Error(err.detail || "Batch audit failed");
+                }
                 cachedAuditData = await res.json();
+                
+                // Update file banner details
+                document.getElementById('currentFileName').textContent = fileName;
+                document.getElementById('currentFileSize').textContent = fileSize ? `(${formatBytes(fileSize)})` : '';
+
                 renderBatchAudit(cachedAuditData);
 
                 // Fetch remediation code concurrently
                 const remRes = await fetch('/api/generate-remediation', { method: 'POST' });
                 cachedRemediation = await remRes.json();
-                renderRemediationCode('pyspark');
+                renderRemediationCode(currentRemediationType || 'pyspark');
 
                 batchLoader.classList.add('hidden');
                 batchResults.classList.remove('hidden');
+                lucide.createIcons();
             } catch (err) {
                 alert("Scan Error: " + err.message);
                 batchLoader.classList.add('hidden');
-                batchResults.classList.remove('hidden');
+                emptyStatePrompt.classList.remove('hidden');
             }
         }
 
@@ -899,9 +1001,9 @@
             document.getElementById('streamQuarantinedCount').textContent = '0';
         });
 
-        // Initialize Batch with sample on load & start stream SSE
+        // Start stream SSE on load; wait for user to explicitly upload/select CSV
         window.addEventListener('DOMContentLoaded', () => {
-            runBatchScan('/api/scan-sample');
+            lucide.createIcons();
             startStreamSSE();
         });
     </script>

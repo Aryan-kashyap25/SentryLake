@@ -8,7 +8,7 @@ print("--- Testing GET / ---")
 res_root = client.get("/")
 print("GET / Status:", res_root.status_code)
 assert res_root.status_code == 200
-assert "DATASENTINEL AI" in res_root.text
+assert "SentryLake" in res_root.text
 
 print("--- Testing POST /api/upload-and-scan ---")
 with open("customer_transactions_dirty.csv", "rb") as f:

@@ -1,5 +1,5 @@
 """
-generate_mock_data.py — DataSentinel AI Mock Data Generator
+generate_mock_data.py — SentryLake Mock Data Generator
 Generates a 100-row realistic banking CSV with embedded PII,
 null spikes, type mismatches, and outliers for testing.
 """
@@ -176,7 +176,7 @@ def generate_dataset(num_rows: int = 100) -> list[dict]:
 def main():
     """Generate and save the mock dataset."""
     print("=" * 65)
-    print("  DATASENTINEL AI — Mock Data Generator")
+    print("  SENTRYLAKE — Mock Data Generator")
     print("=" * 65)
 
     rows = generate_dataset(100)
@@ -203,7 +203,7 @@ def main():
     print(f"  Type mismatches in amount: {type_noise}")
     print(f"  Null emails:               {sum(1 for r in rows if r['email'] == '')}")
     print(f"\n{'=' * 65}")
-    print("  Ready for DataSentinel AI pipeline ingestion.")
+    print("  Ready for SentryLake pipeline ingestion.")
     print("=" * 65)
 
 

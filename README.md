@@ -1,4 +1,4 @@
-# 🛡️ DataSentinel AI
+# 🛡️ SentryLake
 ### Autonomous Data Governance, Schema Drift & Real-Time Quarantine Control Plane
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
@@ -8,7 +8,7 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.0-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Compliance](https://img.shields.io/badge/Compliance-PCI--DSS%20%7C%20GDPR%20%7C%20HIPAA-10B981?style=flat-square)](#regulatory-compliance-mapping)
 
-> **DataSentinel AI** is an autonomous, proactive governance control plane designed for modern enterprise lakehouses (Snowflake, Databricks, Delta Lake) and event streaming architectures (Apache Kafka, AWS Kinesis). It pairs deep batch audit capabilities with active streaming kill-switch interception, dynamic Policy-as-Code remediation (dbt & PySpark), and Differential Privacy synthetic data twin generation.
+> **SentryLake** is an autonomous, proactive governance control plane designed for modern enterprise lakehouses (Snowflake, Databricks, Delta Lake) and event streaming architectures (Apache Kafka, AWS Kinesis). It pairs deep batch audit capabilities with active streaming kill-switch interception, dynamic Policy-as-Code remediation (dbt & PySpark), and Differential Privacy synthetic data twin generation.
 
 ---
 
@@ -35,7 +35,7 @@ Modern financial and enterprise data platforms face severe data leakage and pipe
 2. **Silent Schema & Quality Drift**: Sudden null value spikes (>15%) and corrupt text noise inside numerical balance columns crash downstream machine learning models.
 3. **Reactive Audit Delays**: Governance teams detect violations weeks after ingestion, requiring expensive incident responses and regulatory fines.
 
-**DataSentinel AI** replaces reactive periodic audits with an **autonomous, proactive control plane**:
+**SentryLake** replaces reactive periodic audits with an **autonomous, proactive control plane**:
 - **Active Quarantine Kill-Switch**: Intercepts streaming events in real time. If unencrypted plaintext cards or corrupt payloads are detected, they are quarantined to a Dead-Letter Queue (DLQ) in under 5 milliseconds.
 - **Automated Remediation**: Auto-generates production-grade `dbt` and `PySpark` transformations so data engineers can fix pipeline vulnerabilities in seconds.
 - **Zero-Trust Synthetic Data Twins**: Generates mathematical twin datasets preserving original Gaussian distributions and categorical weights for ML teams without exposing raw PII.
@@ -51,7 +51,7 @@ flowchart TD
         A2["Real-Time Kafka Event Stream\n(financial.transactions.v1)"]
     end
 
-    subgraph Engine["2. DataSentinel Governance Engine"]
+    subgraph Engine["2. SentryLake Governance Engine"]
         B1["Regex + Luhn Card Check\nSSN, IP, Email, Phone"]
         B2["Contextual Semantic Layer\nMother's Maiden Name, DOB"]
         B3["Drift & Quality Engine\nNull Spikes, Type Noise, Z-Scores"]
@@ -87,7 +87,7 @@ flowchart TD
 - **Dynamic Compliance Risk Score**: Computes an enterprise governance index from `0%` to `100%` with severity classifications (`Compliant`, `Moderate`, `Elevated Risk`, `Critical Risk`).
 
 ### 2. Policy-as-Code Remediation Engine (dbt & PySpark)
-Instead of static reports, DataSentinel AI writes production-ready transformation artifacts:
+Instead of static reports, SentryLake writes production-ready transformation artifacts:
 - **Apache Spark / Databricks Delta Lake Pipeline**:
   - Dynamically builds `df_silver` dataframe transformations utilizing `F.regexp_replace` for cards/emails, `F.sha2(col, 256)` for SSNs, and `F.coalesce()` for null imputation.
   - Generates scripts to write directly into silver lakehouse tiers (`silver_lake.customer_transactions_governed`).
@@ -116,7 +116,7 @@ Instead of static reports, DataSentinel AI writes production-ready transformatio
 ## 📂 Repository Structure
 
 ```text
-DataSentinel AI/
+SentryLake/
 ├── main.py                         # Production FastAPI server & governance control plane
 ├── generate_mock_data.py           # Realistic 100-row dirty banking dataset generator
 ├── customer_transactions_dirty.csv # Sample banking snapshot with embedded PII and drift
